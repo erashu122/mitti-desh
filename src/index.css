@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --terracotta: #C3533A;
+  --clay: #D96B43;
+  --charcoal: #2C2523;
+  --bg: #FDFBF7;
+  --card: #FFFDFC;
+  --gold: #D7A449;
+  --success: #3C7A57;
+  --danger: #B84438;
+  --line: #E7DFD3;
+  --cream: #F6EEE3;
+}
+
+html.dark {
+  --terracotta: #E07A5F;
+  --clay: #E8916B;
+  --charcoal: #F3EDE6;
+  --bg: #1B1613;
+  --card: #241E1A;
+  --gold: #E8BE72;
+  --success: #5FA97D;
+  --danger: #E0685A;
+  --line: #3A322C;
+  --cream: #231C17;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; min-height: 100%; }
+body {
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color .25s ease;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 0.5s ease both; }
+
+@keyframes spinSlow { to { transform: rotate(360deg); } }
